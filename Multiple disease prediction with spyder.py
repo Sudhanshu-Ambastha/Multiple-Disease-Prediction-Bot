@@ -63,102 +63,37 @@ disease_data = {
     "Heart Disease Prediction": ["age", "sex", "cp", "trestbps", "chol", "fbs", "restecg", "thalach", "exang", "oldpeak", "slope", "ca", "thal"]
 }
 
-# Initialize the symptom-to-index mapping
-symptom_index = {symptom: index for index, symptom in enumerate(sorted(set(symptom for symptoms in disease_data.values() for symptom in symptoms)))}
-
-# Initialize the symptom encoder
-encoder = LabelEncoder()
-
-# Read the training data
-DATA_PATH = 'C:/Users/sudha/Downloads/Disease prediction/Multiple disease prediction/Training.csv'
-data = pd.read_csv(DATA_PATH).dropna(axis=1)
-
-# Encoding the target values
-data["prognosis"] = encoder.fit_transform(data["prognosis"])
-
-X = data.iloc[:, :-1]
-y = data.iloc[:, -1]
-X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=24)
-
-# Initialize Models
-models = {
-    "SVC": SVC(),
-    "Gaussian NB": GaussianNB(),
-    "Random Forest": RandomForestClassifier(random_state=18)
-}
-
-# Train and test the models
-svm_model = SVC()
-svm_model.fit(X_train, y_train)
-nb_model = GaussianNB()
-nb_model.fit(X_train, y_train)
-rf_model = RandomForestClassifier(random_state=18)
-rf_model.fit(X_train, y_train)
-
-# Combine the models
-final_svm_model = SVC()
-final_nb_model = GaussianNB()
-final_rf_model = RandomForestClassifier(random_state=18)
-final_svm_model.fit(X, y)
-final_nb_model.fit(X, y)
-final_rf_model.fit(X, y)
-
-# Read the test data
-test_data = pd.read_csv('C:/Users/sudha/Downloads/Disease prediction/Multiple disease prediction/Testing.csv').dropna(axis=1)
-test_X = test_data.iloc[:, :-1]
-test_Y = encoder.transform(test_data.iloc[:, -1])
-
-# Create a Streamlit app
-def main():
-    st.title("PolyDisease Predictor")
-
-    # User input for symptoms
-    symptoms = st.text_input("Enter Symptoms (comma-separated)")
-
-    # Initialize the result for both systems
-    disease_diagnosis = ''
-    symptom_diagnosis = ''
-
-    # Create a button for symptom prediction
-    if st.button("Check Symptoms"):
-        # Call the symptomPrediction function with user input
-        diseases = symptomPrediction(symptoms, disease_data)
-        if diseases:
-            symptom_diagnosis = f"Possible Diseases: {', '.join(diseases)}"
-        else:
-            symptom_diagnosis = "No matching diseases found for the given symptoms."
-
-    # Create a button for disease prediction
-    if st.button("Disease Prediction"):
-        # Call the diseasePrediction function with user input
-        disease_name = diseasePrediction(symptoms, disease_data)
-        disease_diagnosis = f"Disease Found: {disease_name}"
-
-    st.success(symptom_diagnosis)
-    st.success(disease_diagnosis)
-
-# Defining the Function to make predictions for disease classification
-def diseasePrediction(symptoms, disease_data):
-    input_symptoms = set(symptoms.split(","))
-    for disease, disease_symptoms in disease_data.items():
-        if input_symptoms == set(disease_symptoms):
-            return disease
-    return "No diseases found"
-
-# Defining the Function to check symptoms and suggest possible diseases
+@st.cache
 def symptomPrediction(symptoms, disease_data):
-    input_symptoms = set(symptoms.split(","))
+    input_symptoms = set(symptoms.lower().split(","))
     possible_diseases = []
 
     for disease, disease_symptoms in disease_data.items():
-        print(f"Comparing {input_symptoms} with {disease_symptoms}")
-        if input_symptoms == set(disease_symptoms):
+        if input_symptoms == set(symptom.lower() for symptom in disease_symptoms):
             possible_diseases.append(disease)
 
     return possible_diseases
 
+# Create a Streamlit app
+def main():
+    st.title("Disease Predictor")
 
+    # User input for symptoms
+    symptoms = st.text_input("Enter Symptoms (comma-separated)")
+
+    # Initialize the result
+    diagnosis = ''
+
+    # Create a button to check symptoms
+    if st.button("Check Symptoms"):
+        # Call the symptomPrediction function with user input
+        diseases = symptomPrediction(symptoms, disease_data)
+        if diseases:
+            diagnosis = f"Possible Diseases: {', '.join(diseases)}"
+        else:
+            diagnosis = "No matching diseases found for the given symptoms."
+
+    st.success(diagnosis)
 
 if __name__ == '__main__':
     main()
-
