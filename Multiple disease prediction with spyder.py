@@ -63,7 +63,7 @@ disease_data = {
     "Heart Disease Prediction": ["age", "sex", "cp", "trestbps", "chol", "fbs", "restecg", "thalach", "exang", "oldpeak", "slope", "ca", "thal"]
 }
 
-@st.cache
+
 def symptomPrediction(symptoms, disease_data):
     input_symptoms = set(symptoms.lower().split(","))
     possible_diseases = []
