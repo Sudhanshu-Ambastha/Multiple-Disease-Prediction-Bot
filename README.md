@@ -37,3 +37,61 @@ To use the Multiple Disease Prediction Bot, follow these steps:
 3. Run the code to get disease predictions.
 
 Remember to ensure that the input is properly formatted to receive accurate predictions.
+
+### Format for Input Parameters
+
+When providing input parameters for disease prediction, use the following format: "Parameter1,Parameter2,Parameter3."
+
+### Available Diseases and Parameters
+
+- **Fungal infection:** Itching,Skin_Rash,Nodal_Skin_Eruptions
+- **Hepatitis C:** Continuous_Sneezing,Shivering,Chills
+- **Hepatitis E:** Joint_Pain,Stomach_Pain,Acidity
+- **Alcoholic hepatitis:** Ulcers_on_Tongue,Muscle_Wasting,Vomiting
+- **Tuberculosis:** Cough,High_Fever,Sweating
+- **Common Cold:** Continuous_Sneezing,Chills,Fatigue
+- **Pneumonia:** High_Fever,Sweating,Breathlessness
+- **Dimorphic hemmorhoids(piles):** Bleeding,Pain_During_Bowel_Movements,Bloody_Stool
+- **Heart attack:** Chest_Pain,Weakness_in_Limbs,Fast_Heart_Rate
+- **Varicose veins:** Swollen_Legs,Swollen_Blood_Vessels,Puffy_Face_and_Eyes
+- **Hypothyroidism:** Fatigue,Weight_Gain,Cold_Hands_and_Feets
+- **Hyperthyroidism:** Mood_Swings,Weight_Loss,Restlessness
+- **Hypoglycemia:** Lethargy,Patches_in_Throat,Irregular_Sugar_Level
+- **Osteoarthristis:** Pain_in_Joints,Muscle_Weakness,Stiff_Neck
+- **Arthritis:** Swelling_Joints,Movement_Stiffness,Loss_of_Balance
+- **Paroymsal Positional Vertigo:** Dizziness,Unsteadiness,Loss_of_Balance
+- **Acne:** Blackheads,Small_Dents_in_Nails,Inflammatory_Nails
+- **Urinary tract infection:** Internal_Itching,Toxic_Look_(Typhos),Depression
+- **Psoriasis:** Red_Spots_Over_Body,Watering_From_Eyes,Increased_Appetite
+- **Hepatitis D:** Muscle_Pain,Altered_Sensorium,Red_Spots_Over_Body
+- **Hepatitis B:** Belly_Pain,Abnormal_Menstruation,Dischromic_Patches
+- **Allergy:** Watering_From_Eyes,Increased_Appetite,Mucoid_Sputum
+- **Hepatitis A:** Red_Spots_Over_Body,Watering_From_Eyes,Increased_Appetite
+- **GERD:** Family_History,Mucoid_Sputum,Rusty_Sputum
+- **Chronic cholestasis:** Family_History,Mucoid_Sputum,Rusty_Sputum
+- **Drug Reaction:** Family_History,Mucoid_Sputum,Rusty_Sputum
+- **Peptic ulcer disease:** Family_History,Mucoid_Sputum,Rusty_Sputum
+- **AIDS:** Family_History,Mucoid_Sputum,Rusty_Sputum
+- **Diabetes:** Family_History,Mucoid_Sputum,Rusty_Sputum
+- **Gastroenteritis:** Family_History,Mucoid_Sputum,Rusty_Sputum
+- **Bronchial Asthma:** Family_History,Mucoid_Sputum,Rusty_Sputum
+- **Hypertension:** Family_History,Mucoid_Sputum,Rusty_Sputum
+- **Migraine:** Family_History,Mucoid_Sputum,Rusty_Sputum
+- **Cervical spondylosis:** Family_History,Mucoid_Sputum,Rusty_Sputum
+- **Paralysis (brain hemorrhage):** Family_History,Mucoid_Sputum,Rusty_Sputum
+- **Jaundice:** Family_History,Mucoid_Sputum,Rusty_Sputum
+- **Malaria:** Family_History,Mucoid_Sputum,Rusty_Sputum
+- **Chicken pox:** Family_History,Mucoid_Sputum,Rusty_Sputum
+- **Dengue:** Family_History,Mucoid_Sputum,Rusty_Sputum
+- **Typhoid:** Family_History,Mucoid_Sputum, Rusty_Sputum
+- **Impetigo:** Family_History,Mucoid_Sputum,Rusty_Sputum
+- **Diabetes Prediction:** For diabetes prediction, provide the following parameters - Pregnancies,Glucose,BloodPressure,SkinThickness,Insulin,BMI,DiabetesPedigreeFunction,Age
+- **Heart Disease Prediction:** For heart disease prediction, provide the following parameters - Age,Sex,CP,Trestbps,Chol,Fbs,Restecg,Thal,Exang,OldPeak,Slope,Ca,Thal
+
+Thal: 0 = normal; 1 = fixed defect; 2 = reversable defect
+
+### Getting Disease Predictions
+
+To get a prediction for a specific disease, simply copy and paste the parameters for that disease in the format mentioned above. The model will analyze the input parameters and provide a prediction for the disease based on the provided data.
+
+Remember to include all relevant parameters in the input to receive accurate predictions.
