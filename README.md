@@ -17,10 +17,9 @@ Please note that when providing input to the bot, it's important to format the s
 
 1. **Multiple disease prediction with spyder.py (working main model):** This file contains the main code for the disease prediction bot using the Spyder IDE.
 2. **Multiple_disease_prediction_bot_trained_model_svm.sav:** This file contains the trained SVM model for disease prediction.
-3. **Multiple disease predictor (combined).py :** The code file for disease prediction in the Spyder IDE and it is a combined version of diabetes, heart, multiple disease prediction bot.
-4. **Testing.csv:** The dataset used for testing the disease prediction bot.
-5. **Training.csv:** The dataset used for training the machine learning models.
-6. **multiple_disease_prediction_.py (Google Colab file):** The Google Colab file for disease prediction using the trained models.
+3. **Testing.csv:** The dataset used for testing the disease prediction bot.
+4. **Training.csv:** The dataset used for training the machine learning models.
+5. **multiple_disease_prediction_.py (Google Colab file):** The Google Colab file for disease prediction using the trained models.
 
 ## Features
 
