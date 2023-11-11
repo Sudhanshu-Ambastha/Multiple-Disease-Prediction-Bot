@@ -94,3 +94,9 @@ Thal: 0 = normal; 1 = fixed defect; 2 = reversable defect
 To get a prediction for a specific disease, simply copy and paste the parameters for that disease in the format mentioned above. The model will analyze the input parameters and provide a prediction for the disease based on the provided data.
 
 Remember to include all relevant parameters in the input to receive accurate predictions.
+
+## Troubleshooting
+If you encounter any issues or have questions, please don't hesitate to reach out for support.
+
+## Author  
+Sudhanshu Ambastha
