@@ -98,5 +98,7 @@ Remember to include all relevant parameters in the input to receive accurate pre
 ## Troubleshooting
 If you encounter any issues or have questions, please don't hesitate to reach out for support.
 
+Happy predicting! 🤖💙
+
 ## Author  
 Sudhanshu Ambastha
