@@ -1,99 +1,56 @@
 # -*- coding: utf-8 -*-
 """
-Created on Sun Oct 15 07:48:04 2023
+Created on Mon Nov 13 13:04:19 2023
 
 @author: sudha
 """
 
 import streamlit as st
-import numpy as np
 import pandas as pd
-from sklearn.preprocessing import LabelEncoder
-from sklearn.model_selection import train_test_split
-from sklearn.svm import SVC
-from sklearn.naive_bayes import GaussianNB
 from sklearn.ensemble import RandomForestClassifier
-import pickle
-from streamlit_option_menu import option_menu
+from sklearn.metrics import accuracy_score, confusion_matrix
 
-# Disease dictionary with symptoms
-disease_data = {
-    "Fungal infection": ["itching", "skin_rash", "nodal_skin_eruptions"],
-    "Hepatitis C": ["continuous_sneezing", "shivering", "chills"],
-    "Hepatitis E": ["joint_pain", "stomach_pain", "acidity"],
-    "Alcoholic hepatitis": ["ulcers_on_tongue", "muscle_wasting", "vomiting"],
-    "Tuberculosis": ["cough", "high_fever", "sweating"],
-    "Common Cold": ["continuous_sneezing", "chills", "fatigue"],
-    "Pneumonia": ["high_fever", "sweating", "breathlessness"],
-    "Dimorphic hemmorhoids(piles)": ["bleeding", "pain_during_bowel_movements", "bloody_stool"],
-    "Heart attack": ["chest_pain", "weakness_in_limbs", "fast_heart_rate"],
-    "Varicose veins": ["swollen_legs", "swollen_blood_vessels", "puffy_face_and_eyes"],
-    "Hypothyroidism": ["fatigue", "weight_gain", "cold_hands_and_feets"],
-    "Hyperthyroidism": ["mood_swings", "weight_loss", "restlessness"],
-    "Hypoglycemia": ["lethargy", "patches_in_throat", "irregular_sugar_level"],
-    "Osteoarthristis": ["pain_in_joints", "muscle_weakness", "stiff_neck"],
-    "Arthritis": ["swelling_joints", "movement_stiffness", "loss_of_balance"],
-    "Paroymsal Positional Vertigo": ["dizziness", "unsteadiness", "loss_of_balance"],
-    "Acne": ["blackheads", "small_dents_in_nails", "inflammatory_nails"],
-    "Urinary tract infection": ["internal_itching", "toxic_look_(typhos)", "depression"],
-    "Psoriasis": ["red_spots_over_body", "watering_from_eyes", "increased_appetite"],
-    "Hepatitis D": ["muscle_pain", "altered_sensorium", "red_spots_over_body"],
-    "Hepatitis B": ["belly_pain", "abnormal_menstruation", "dischromic _patches"],
-    "Allergy": ["watering_from_eyes", "increased_appetite", "mucoid_sputum"],
-    "Hepatitis A": ["red_spots_over_body", "watering_from_eyes", "increased_appetite"],
-    "GERD": ["family_history", "mucoid_sputum", "rusty_sputum"],
-    "Chronic cholestasis": ["family_history", "mucoid_sputum", "rusty_sputum"],
-    "Drug Reaction": ["family_history", "mucoid_sputum", "rusty_sputum"],
-    "Peptic ulcer disease": ["family_history", "mucoid_sputum", "rusty_sputum"],
-    "AIDS": ["family_history", "mucoid_sputum", "rusty_sputum"],
-    "Diabetes": ["family_history", "mucoid_sputum", "rusty_sputum"],
-    "Gastroenteritis": ["family_history", "mucoid_sputum", "rusty_sputum"],
-    "Bronchial Asthma": ["family_history", "mucoid_sputum", "rusty_sputum"],
-    "Hypertension": ["family_history", "mucoid_sputum", "rusty_sputum"],
-    "Migraine": ["family_history", "mucoid_sputum", "rusty_sputum"],
-    "Cervical spondylosis": ["family_history", "mucoid_sputum", "rusty_sputum"],
-    "Paralysis (brain hemorrhage)": ["family_history", "mucoid_sputum", "rusty_sputum"],
-    "Jaundice": ["family_history", "mucoid_sputum", "rusty_sputum"],
-    "Malaria": ["family_history", "mucoid_sputum", "rusty_sputum"],
-    "Chicken pox": ["family_history", "mucoid_sputum", "rusty_sputum"],
-    "Dengue": ["family_history", "mucoid_sputum", "rusty_sputum"],
-    "Typhoid": ["family_history", "mucoid_sputum", "rusty_sputum"],
-    "Impetigo": ["family_history", "mucoid_sputum", "rusty_sputum"],
-    "Diabetes Prediction": ["Pregnancies", "Glucose", "BloodPressure", "SkinThickness", "Insulin", "BMI", "DiabetesPedigreeFunction", "Age"],
-    "Heart Disease Prediction": ["age", "sex", "cp", "trestbps", "chol", "fbs", "restecg", "thalach", "exang", "oldpeak", "slope", "ca", "thal"]
-}
+# Function to predict diseases based on symptoms
+def predict_diseases(symptoms):
+    # Creating input data for the model
+    input_data = [0] * len(features.columns)
+    for symptom in symptoms:
+        if symptom in features.columns:
+            index = features.columns.get_loc(symptom)
+            input_data[index] = 1
 
+    # Reshaping the input data
+    input_data = pd.DataFrame([input_data], columns=features.columns)
 
-def symptomPrediction(symptoms, disease_data):
-    input_symptoms = set(symptoms.lower().split(","))
-    possible_diseases = []
+    # Generating predictions
+    predictions = rf.predict(input_data)
+    return predictions
 
-    for disease, disease_symptoms in disease_data.items():
-        if input_symptoms == set(symptom.lower() for symptom in disease_symptoms):
-            possible_diseases.append(disease)
+# Load data
+train_data = pd.read_csv('C:\\Users\\sudha\\Downloads\\Disease prediction\\Multiple disease prediction\\Training.csv')
+test_data = pd.read_csv('C:\\Users\\sudha\\Downloads\\Disease prediction\\Multiple disease prediction\\Testing.csv')
 
-    return possible_diseases
+# Split data into features and target variable
+features = train_data.drop('prognosis', axis=1)
+target = train_data['prognosis']
 
-# Create a Streamlit app
-def main():
-    st.title("Disease Predictor")
+# Create RandomForestClassifier
+rf = RandomForestClassifier(n_estimators=100)
 
-    # User input for symptoms
-    symptoms = st.text_input("Enter Symptoms (comma-separated)")
+# Train the model
+rf.fit(features, target)
 
-    # Initialize the result
-    diagnosis = ''
+# Streamlit app
+st.title("Multiple Disease Prediction using Symptoms")
 
-    # Create a button to check symptoms
-    if st.button("Check Symptoms"):
-        # Call the symptomPrediction function with user input
-        diseases = symptomPrediction(symptoms, disease_data)
-        if diseases:
-            diagnosis = f"Possible Diseases: {', '.join(diseases)}"
-        else:
-            diagnosis = "No matching diseases found for the given symptoms."
+# User input for symptoms
+symptoms = st.text_input("Enter Symptoms (comma-separated)")
 
-    st.success(diagnosis)
+# Initialize the result
+diagnosis = ''
 
-if __name__ == '__main__':
-    main()
+# Create a button to check symptoms
+if st.button("Check Symptoms"):
+    # Call the predict_diseases function with user input
+    diseases = predict_diseases(symptoms.split(","))
+    st.success(f"Predicted Diseases: {', '.join(diseases)}")
