@@ -27,8 +27,8 @@ def predict_diseases(symptoms):
     return predictions
 
 # Load data
-train_data = pd.read_csv('C:\\Users\\sudha\\Downloads\\Disease prediction\\Multiple disease prediction\\Training.csv')
-test_data = pd.read_csv('C:\\Users\\sudha\\Downloads\\Disease prediction\\Multiple disease prediction\\Testing.csv')
+train_data = pd.read_csv('Multiple disease prediction/Training.csv')
+test_data = pd.read_csv('Multiple disease prediction/Testing.csv')
 
 # Split data into features and target variable
 features = train_data.drop('prognosis', axis=1)
