@@ -1,5 +1,7 @@
 # Multiple Disease Prediction Bot
 
+![Web capture_16-12-2023_15579_localhost](https://github.com/Sudhanshu-Ambastha/Google-background/assets/135802131/22a87cc6-fc4d-4ed5-832d-dd8d9d230f94)
+
 ## Table of Contents
 
 - [About](#about)
