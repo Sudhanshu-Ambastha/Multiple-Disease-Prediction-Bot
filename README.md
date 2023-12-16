@@ -1,8 +1,5 @@
 # Multiple Disease Prediction Bot
 
-![Web capture_16-12-2023_15579_localhost](https://github.com/Sudhanshu-Ambastha/Google-background/assets/135802131/22a87cc6-fc4d-4ed5-832d-dd8d9d230f94)
-![Web capture_16-12-2023_16327_localhost](https://github.com/Sudhanshu-Ambastha/Google-background/assets/135802131/5a297e58-7ead-4407-8116-bdfff8585079)
-
 ## Table of Contents
 
 - [About](#about)
@@ -46,7 +43,9 @@ When providing input parameters for disease prediction, use the following format
 
 ### Available Diseases and Parameters
 
+![Web capture_16-12-2023_15579_localhost](https://github.com/Sudhanshu-Ambastha/Google-background/assets/135802131/22a87cc6-fc4d-4ed5-832d-dd8d9d230f94)
 - **Fungal infection:** Itching,Skin_Rash,Nodal_Skin_Eruptions
+![Web capture_16-12-2023_16327_localhost](https://github.com/Sudhanshu-Ambastha/Google-background/assets/135802131/5a297e58-7ead-4407-8116-bdfff8585079)
 - **Hepatitis C:** Continuous_Sneezing,Shivering,Chills
 - **Hepatitis E:** Joint_Pain,Stomach_Pain,Acidity
 - **Alcoholic hepatitis:** Ulcers_on_Tongue,Muscle_Wasting,Vomiting
