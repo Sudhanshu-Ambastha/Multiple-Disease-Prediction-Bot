@@ -104,5 +104,4 @@ If you encounter any issues or have questions, please don't hesitate to reach ou
 Happy predicting! 🤖💙
 
 ## Author  
-@Sudhanshu-Ambastha
-
+[Sudhanshu Ambastha](https://github.com/Sudhanshu-Ambastha)
