@@ -104,4 +104,6 @@ If you encounter any issues or have questions, please don't hesitate to reach ou
 Happy predicting! 🤖💙
 
 ## Author  
-[Sudhanshu Ambastha](https://github.com/Sudhanshu-Ambastha)
+<a href = "https://github.com/Sudhanshu-Ambastha/Multiple-Disease-Prediction-Bot/contributors">
+  <img src = "https://contrib.rocks/image?repo=Sudhanshu-Ambastha/Multiple-Disease-Prediction-Bot"/>
+</a>
