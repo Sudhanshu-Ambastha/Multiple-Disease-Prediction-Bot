@@ -68,8 +68,8 @@ When providing input parameters for disease prediction, use the following format
 |Fast_Heart_Rate|High_Fever|Irregular_Sugar_Level|Joint_Pain|Knee_Pain|Lack_of_Concentration|  
 |Fatigue|Headache|Increased_Appetite |||Lethargy|  
 |Fluid_Overload|Hip_Joint_Painlurred_And_Distorted_Vision|Increased_Urination|||Loss_of_Appetite|
-|Foul_Smell_of_Urine|History_of_Alcohol_Consumption|Indigestion||Loss_of_Balance|
-|Family-History||Inflammatory_Nails ||Loss_of_Smell|
+|Foul_Smell_of_Urine|History_of_Alcohol_Consumption|Indigestion|||Loss_of_Balance|
+|Family-History||Inflammatory_Nails |||Loss_of_Smell|
 |||Internal_Itching|| 
 |||Irritability||  
 |||Irritation_in_Anus||
