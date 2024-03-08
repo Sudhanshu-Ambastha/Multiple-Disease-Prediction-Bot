@@ -27,7 +27,7 @@ Please note that when providing input to the bot, it's important to format the s
 ## Features
 
 - Predicts up to 40 different diseases.
-- Utilizes approximately 131 to 133 parameters for training.
+- Utilizes approximately 131 parameters for training.
 - Trained on three different models: SVM, RF, and NB.
 
 ## Usage
