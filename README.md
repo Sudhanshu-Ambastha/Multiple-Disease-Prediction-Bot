@@ -42,55 +42,70 @@ Remember to ensure that the input is properly formatted to receive accurate pred
 
 ### Format for Input Parameters
 
-When providing input parameters for disease prediction, use the following format: "Parameter1,Parameter2,Parameter3."
+When providing input parameters for disease prediction, use the following format: "Parameter1,Parameter2,Parameter3." for ex=
+"**Fungal infection:** Itching,Skin_Rash,Nodal_Skin_Eruptions"
 
-### Available Diseases and Parameters
+# List of Available Symptoms
 
-- **Fungal infection:** Itching,Skin_Rash,Nodal_Skin_Eruptions
-- **Hepatitis C:** Continuous_Sneezing,Shivering,Chills
-- **Hepatitis E:** Joint_Pain,Stomach_Pain,Acidity
-- **Alcoholic hepatitis:** Ulcers_on_Tongue,Muscle_Wasting,Vomiting
-- **Tuberculosis:** Cough,High_Fever,Sweating
-- **Common Cold:** Continuous_Sneezing,Chills,Fatigue
-- **Pneumonia:** High_Fever,Sweating,Breathlessness
-- **Dimorphic hemmorhoids(piles):** Bleeding,Pain_During_Bowel_Movements,Bloody_Stool
-- **Heart attack:** Chest_Pain,Weakness_in_Limbs,Fast_Heart_Rate
-- **Varicose veins:** Swollen_Legs,Swollen_Blood_Vessels,Puffy_Face_and_Eyes
-- **Hypothyroidism:** Fatigue,Weight_Gain,Cold_Hands_and_Feets
-- **Hyperthyroidism:** Mood_Swings,Weight_Loss,Restlessness
-- **Hypoglycemia:** Lethargy,Patches_in_Throat,Irregular_Sugar_Level
-- **Osteoarthristis:** Pain_in_Joints,Muscle_Weakness,Stiff_Neck
-- **Arthritis:** Swelling_Joints,Movement_Stiffness,Loss_of_Balance
-- **Paroymsal Positional Vertigo:** Dizziness,Unsteadiness,Loss_of_Balance
-- **Acne:** Blackheads,Small_Dents_in_Nails,Inflammatory_Nails
-- **Urinary tract infection:** Internal_Itching,Toxic_Look_(Typhos),Depression
-- **Psoriasis:** Red_Spots_Over_Body,Watering_From_Eyes,Increased_Appetite
-- **Hepatitis D:** Muscle_Pain,Altered_Sensorium,Red_Spots_Over_Body
-- **Hepatitis B:** Belly_Pain,Abnormal_Menstruation,Dischromic_Patches
-- **Allergy:** Watering_From_Eyes,Increased_Appetite,Mucoid_Sputum
-- **Hepatitis A:** Red_Spots_Over_Body,Watering_From_Eyes,Increased_Appetite
-- **GERD:** Family_History,Mucoid_Sputum,Rusty_Sputum
-- **Chronic cholestasis:** Family_History,Mucoid_Sputum,Rusty_Sputum
-- **Drug Reaction:** Family_History,Mucoid_Sputum,Rusty_Sputum
-- **Peptic ulcer disease:** Family_History,Mucoid_Sputum,Rusty_Sputum
-- **AIDS:** Family_History,Mucoid_Sputum,Rusty_Sputum
-- **Diabetes:** Family_History,Mucoid_Sputum,Rusty_Sputum
-- **Gastroenteritis:** Family_History,Mucoid_Sputum,Rusty_Sputum
-- **Bronchial Asthma:** Family_History,Mucoid_Sputum,Rusty_Sputum
-- **Hypertension:** Family_History,Mucoid_Sputum,Rusty_Sputum
-- **Migraine:** Family_History,Mucoid_Sputum,Rusty_Sputum
-- **Cervical spondylosis:** Family_History,Mucoid_Sputum,Rusty_Sputum
-- **Paralysis (brain hemorrhage):** Family_History,Mucoid_Sputum,Rusty_Sputum
-- **Jaundice:** Family_History,Mucoid_Sputum,Rusty_Sputum
-- **Malaria:** Family_History,Mucoid_Sputum,Rusty_Sputum
-- **Chicken pox:** Family_History,Mucoid_Sputum,Rusty_Sputum
-- **Dengue:** Family_History,Mucoid_Sputum,Rusty_Sputum
-- **Typhoid:** Family_History,Mucoid_Sputum, Rusty_Sputum
-- **Impetigo:** Family_History,Mucoid_Sputum,Rusty_Sputum
-- **Diabetes Prediction:** For diabetes prediction, provide the following parameters - Pregnancies,Glucose,BloodPressure,SkinThickness,Insulin,BMI,DiabetesPedigreeFunction,Age
-- **Heart Disease Prediction:** For heart disease prediction, provide the following parameters - Age,Sex,CP,Trestbps,Chol,Fbs,Restecg,Thal,Exang,OldPeak,Slope,Ca,Thal
+|A|B|C|D|E|
+|---|---|---|---|---|
+|Abnormal_Menstruation|Bladder_Discomfort|Chest_Pain|Dark_Urine|Enlarged_Thyroid|  
+|Abdominal_Pain|Belly_Pain|Chills|Dehydration|Excessive_Hunger| 
+|Acidity|Blurred_And_Distorted_Vision|Cold_Hands_and_Feets|Depression|Extra_Marital_Contacts|
+|Acute_Liver_Failure|Bloody_Stool|Coma|Diarrhoea|
+|Altered_Sensorium|Back_Pain|Constipation|Dizziness| 
+|Anxiety|Breathlessness|Congestion|Drying_and_Tingling_Lips| 
+||Belly_Pain|Continuous_Sneezing|Dischromic|  
+||Brittle_Nails|Continuous_Feel_of_Urine|Distention_Of_Abdomen|
+||Blackheads|Cough|
+||Bruising|Cramps|
+||Blister 
+||Burning_Micturition| 
+||Blood_In-Sputum|
 
-Thal: 0 = normal; 1 = fixed defect; 2 = reversable defect
+|F|H|I|J|K|L|
+|---|---|---|---|---|---|
+|Fast_Heart_Rate|High_Fever|Irregular_Sugar_Level|Joint_Pain|Knee_Pain|Lack_of_Concentration|  
+|Fatigue|Headache|Increased_Appetite |||Lethargy|  
+|Fluid_Overload|Hip_Joint_Painlurred_And_Distorted_Vision|Increased_Urination|||Loss_of_Appetite|
+|Foul_Smell_of_Urine|History_of_Alcohol_Consumption|Indigestion||Loss_of_Balance|
+|Family-History||Inflammatory_Nails ||Loss_of_Smell|
+|||Internal_Itching|| 
+|||Irritability||  
+|||Irritation_in_Anus||
+|||Itching|
+
+|M|N|O|P|R|S|
+|---|---|---|---|---|---|
+|Muscle_Wasting|Nausea|Obesity|Phlegm|Redness_Of_Eyes|Slurred_Speech| 
+|Malaise|Neck_Pain||Pain_Behind_The_Eyes|Red_Sore_Around_Nose|Sweating| 
+|Metallic_Taste|Nodal_Skin_Eruptions||Patches_In_Throat|Red_Spots_Over_Body|Sunken_Eyes|
+|Mild_Fever|||Pain_During_Bowel_Movements|Restlessness|Scurring|
+|Mood_Swings|||Pain_in_Anal_Region|Runny_Nose|Shivering|  
+|Movement_Stiffness|||Painful_Walking|Rusty_Sputum|Silver_Like_Dusting|  
+|Muscle_Pain|||Palpitations|Receiving_blood_transfusion|Sinus_Pressure| 
+|Muscle_Weakness|||Polyuria|Receiving_Unterile_Injections|Skin_Peeling|
+|Muscular_Stiffness|||Prominent_Veins_on_Calf||Skin_Rash|
+|Mucoid_Sputum|||Puffy_Face_and_Eyes||Small_Dents_in_Nails|  
+||||Pus_Filled_Pimples||Spinning_Movements|
+||||Patches||Spotting_Urination|
+||||Palpitations||Stiff_Neck|
+||||||Stomach_Pain|     
+||||||Stomach_Bleeding| 
+||||||Swelling_Joints| 
+||||||Swelling_of_Stomach|  
+||||||Swollen_Legs| 
+||||||Swollen_Blood_Vessels| 
+||||||Swollen_Extremities| 
+||||||Swollen_Lymph_Nodes| 
+
+|T|U|V|W|Y|
+|---|---|---|---|---|
+|Throat_Irritation|Ulcers_on_Tongue|Vomiting|Watering_From_Eyes|Yellow_Crust_Ooze|  
+|Toxic_Look_(Typhos)|Unsteadiness|Visual-Disturbances|Weakness_in_Limbs|Yellow_Urine| 
+||||Weight_Gain|Yellowing_of_Eyes |
+||||Weight_Loss|Yellowish_Skin |
+||||weakness_of_one_body_side||
 
 ### Getting Disease Predictions
 
