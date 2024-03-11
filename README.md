@@ -12,7 +12,7 @@
 
 ## About
 
-The Multiple Disease Prediction Bot is a machine learning model designed to predict up to 40 different diseases based on input symptoms. The model is trained on a dataset with approximately 131 parameters and utilizes three different training models: Support Vector Machine (SVM), Random Forest (RF), and Naive Bayes (NB).
+The Multiple Disease Prediction Bot is a machine learning model designed to predict up to 41 different diseases based on input symptoms. The model is trained on a dataset with approximately 131 parameters and utilizes three different training models: Support Vector Machine (SVM), Random Forest (RF), and Naive Bayes (NB).
 
 Please note that when providing input to the bot, it's important to format the symptoms as follows: "Itching,Skin_Rash,Nodal_Skin_Eruptions." Incorrect formatting may lead to false predictions or errors.
 
@@ -26,7 +26,7 @@ Please note that when providing input to the bot, it's important to format the s
 
 ## Features
 
-- Predicts up to 40 different diseases.
+- Predicts up to 41 different diseases.
 - Utilizes approximately 131 parameters for training.
 - Trained on three different models: SVM, RF, and NB.
 
