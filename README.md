@@ -123,9 +123,10 @@ When providing input parameters for disease prediction, use the following format
 
 ### Getting Disease Predictions
 
-To get a prediction for a specific disease, simply copy and paste the parameters for that disease in the format mentioned above. The model will analyze the input parameters and provide a prediction for the disease based on the provided data.
+To run the predicting system for a result, simply copy and paste the parameters for that disease in the format mentioned above. The model will analyze the input parameters and provide a prediction for the disease based on the provided data.
 
-Remember to include all relevant parameters in the input to receive accurate predictions.
+Remember to include all relevant parameters in the input to receive accurate predictions
+and Kindly provide an adequate number of input symptoms to avoid potential errors and ensure a smoother experience and more accurate results. Just like doctors need sufficient symptoms to diagnose accurately, our system functions better with comprehensive information, reducing the chances of errors.
 
 ## Troubleshooting
 If you encounter any issues or have questions, please don't hesitate to reach out for support.
