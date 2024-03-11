@@ -119,7 +119,7 @@ When providing input parameters for disease prediction, use the following format
 | Common Cold                | Hypothyroidism             | Osteoarthristis        | Hepatitis D                | Peptic ulcer disease   |
 | Chicken pox                | Hyperthyroidism            | Migraine               | Hepatitis B                | AIDS                   |
 | Dimorphic hemmorhoids(piles)| Hypertension              | Paralysis (brain hemorrhage) | Allergy              | Hepatitis A            |
-
+| Impetigo                   |                            |                        |                            |                        |
 
 ### Getting Disease Predictions
 
