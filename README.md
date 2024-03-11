@@ -107,6 +107,20 @@ When providing input parameters for disease prediction, use the following format
 ||||Weight_Loss|Yellowish_Skin |
 ||||weakness_of_one_body_side||
 
+# List of Avilable Diseases
+
+| Column 1                   | Column 2                   | Column 3               | Column 4                   | Column 5               |
+|----------------------------|----------------------------|------------------------|----------------------------|------------------------|
+| Fungal infection           | Jaundice                   | Heart attack           | Arthritis                  | GERD                   |
+| Hepatitis C                | Malaria                    | Varicose veins         | Paroymsal Positional Vertigo | Diabetes             |
+| Hepatitis E                | Pneumonia                  | Gastroenteritis        | Acne                       | Heart Disease          |
+| Alcoholic hepatitis        | Dengue                     | Bronchial Asthma       | Urinary tract infection    | Chronic cholestasis    |
+| Tuberculosis               | Typhoid                    | Hypoglycemia           | Psoriasis                  | Drug Reaction          |
+| Common Cold                | Hypothyroidism             | Osteoarthristis        | Hepatitis D                | Peptic ulcer disease   |
+| Chicken pox                | Hyperthyroidism            | Migraine               | Hepatitis B                | AIDS                   |
+| Dimorphic hemmorhoids(piles)| Hypertension              | Paralysis (brain hemorrhage) | Allergy              | Hepatitis A            |
+
+
 ### Getting Disease Predictions
 
 To get a prediction for a specific disease, simply copy and paste the parameters for that disease in the format mentioned above. The model will analyze the input parameters and provide a prediction for the disease based on the provided data.
