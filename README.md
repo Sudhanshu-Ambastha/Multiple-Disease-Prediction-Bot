@@ -140,7 +140,6 @@ Happy predicting! 🤖💙
 ## Check out the other repositories related to this one
 <details>
 <summary>Related Repos which you should check out:-</summary>
-<br><br>
 
 ![Web capture_16-12-2023_162935_localhost](https://github.com/Sudhanshu-Ambastha/Google-background/assets/135802131/b33c540d-9cb2-410c-b83c-37b99be726de)  
 - [Diabetes Prediction Bot](https://github.com/Sudhanshu-Ambastha/Diabetes-Prediction-Bot)
