@@ -42,10 +42,12 @@ Remember to ensure that the input is properly formatted to receive accurate pred
 
 ### Format for Input Parameters
 
-When providing input parameters for disease prediction, use the following format: "Parameter1,Parameter2,Parameter3." for ex=
-"**Fungal infection:** Itching,Skin_Rash,Nodal_Skin_Eruptions"
+When providing input parameters for disease prediction, use the following format: "Parameter1,Parameter2,Parameter3.
+"for ex= "**Fungal infection:** Itching,Skin_Rash,Nodal_Skin_Eruptions"
 
-# List of Available Symptoms
+# List of Available Symptoms & Diseases
+<details>
+<summary>List of Symptoms:-</summary>
 
 |A|B|C|D|E|
 |---|---|---|---|---|
@@ -106,9 +108,10 @@ When providing input parameters for disease prediction, use the following format
 ||||Weight_Gain|Yellowing_of_Eyes |
 ||||Weight_Loss|Yellowish_Skin |
 ||||weakness_of_one_body_side||
-
-# List of Avilable Diseases
-
+</details>
+<details>
+<summary>List of Diseases:-</summary>
+    
 | Column 1                   | Column 2                   | Column 3               | Column 4                   | Column 5               |
 |----------------------------|----------------------------|------------------------|----------------------------|------------------------|
 | Fungal infection           | Jaundice                   | Heart attack           | Arthritis                  | GERD                   |
@@ -120,6 +123,7 @@ When providing input parameters for disease prediction, use the following format
 | Chicken pox                | Hyperthyroidism            | Migraine               | Hepatitis B                | AIDS                   |
 | Dimorphic hemmorhoids(piles)| Hypertension              | Paralysis (brain hemorrhage) | Allergy              | Hepatitis A            |
 | Impetigo                   |                            |                        |                            |                        |
+</details>
 
 ### Getting Disease Predictions
 
@@ -132,6 +136,22 @@ and Kindly provide an adequate number of input symptoms to avoid potential error
 If you encounter any issues or have questions, please don't hesitate to reach out for support.
 
 Happy predicting! 🤖💙
+
+## Check out the othere repositoryies related to this one
+<details>
+<summary>Related Repos which you should check out:-</summary>
+<br><br>
+
+![Web capture_16-12-2023_162935_localhost](https://github.com/Sudhanshu-Ambastha/Google-background/assets/135802131/b33c540d-9cb2-410c-b83c-37b99be726de)  
+- [Diabetes Prediction Bot](https://github.com/Sudhanshu-Ambastha/Diabetes-Prediction-Bot)&gt;
+
+![Web capture_16-12-2023_162351_localhost](https://github.com/Sudhanshu-Ambastha/Google-background/assets/135802131/10dc50a7-ac7d-4972-bf52-736f448a6ca4)  
+- [Heart Disease Prediction Bot](https://github.com/Sudhanshu-Ambastha/Heart-Disease-Prediction-Bot)
+
+</details>
+- Check out the main repo as this project is part of it
+
+[Combined Disease Predictor](https://github.com/Sudhanshu-Ambastha/Combined-Disease-Prediction-Bot)
 
 ## Contributors
 <table>
