@@ -45,6 +45,13 @@ pip install matplotlib seaborn scikit-learn numpy pandas scipy
 ```
 3. Format the input symptoms as "Itching, Skin Rash, Nodal Skin Eruptions"
 4. Run the code to get disease predictions.
+```
+& "C:\Users\sudha\AppData\Roaming\Python\Python313\Scripts\streamlit.exe" run "Multiple disease prediction with spyder.py"
+```
+or
+```
+streamlit run Multiple disease prediction with spyder.py
+```
 
 Remember to ensure that the input is properly formatted to receive accurate predictions.
 
