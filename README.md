@@ -14,15 +14,19 @@
 
 The Multiple Disease Prediction Bot is a machine learning model designed to predict up to 41 different diseases based on input symptoms. The model is trained on a dataset with approximately 131 parameters and utilizes three different training models: Support Vector Machine (SVM), Random Forest (RF), and Naive Bayes (NB).
 
-Please note that when providing input to the bot, it's important to format the symptoms as follows: "Itching,Skin_Rash,Nodal_Skin_Eruptions." Incorrect formatting may lead to false predictions or errors.
+Please note that when providing input to the bot, it's important to format the symptoms as follows: "Itching, Skin Rash, Nodal Skin Eruptions" Incorrect formatting may lead to false predictions or errors.
 
 ## Files
 
-1. **Multiple disease prediction with spyder.py (working main model):** This file contains the main code for the disease prediction bot using the Spyder IDE.
-2. **Multiple_disease_prediction_bot_trained_model_svm.sav:** This file contains the trained SVM model for disease prediction.
-3. **Testing.csv:** The dataset used for testing the disease prediction bot.
-4. **Training.csv:** The dataset used for training the machine learning models.
-5. **multiple_disease_prediction_.py (Google Colab file):** The Google Colab file for disease prediction using the trained models.
+1.  **`LabelEncoder.ipynb`:** Jupyter Notebook likely used for encoding categorical disease labels.
+2.  **`Multiple disease prediction with spyder.py`:** The main Python script for the disease prediction bot, likely intended to be run with Spyder IDE.
+3.  **`Multiple_Disease_prediction_.ipynb`:** Jupyter Notebook for disease prediction, potentially used in Google Colab.
+4.  **`Multiple_disease_prediction_bot_trained_model.sav`:** The serialized (saved) trained Support Vector Machine (SVM) model.
+5.  **`README.md`:** This file, providing information about the project.
+6.  **`Testing.csv`:** The dataset used for evaluating the performance of the trained model.
+7.  **`Training.csv`:** The dataset used for training the machine learning model.
+8.  **`label_encoder.sav`:** The serialized (saved) LabelEncoder object, used to transform disease names.
+9.  **`multiple_disease_prediction.py`:** Another Python script for disease prediction, potentially a refactored or alternative version.
 
 ## Features
 
@@ -35,15 +39,19 @@ Please note that when providing input to the bot, it's important to format the s
 To use the Multiple Disease Prediction Bot, follow these steps:
 
 1. Open the "Multiple disease prediction with spyder.py" file using an appropriate IDE like Spyder.
-2. Format the input symptoms as "Itching,Skin_Rash,Nodal_Skin_Eruptions."
-3. Run the code to get disease predictions.
+2. Ensure that the necessary dependencies are installed, including the required Python libraries.
+```
+pip install matplotlib seaborn scikit-learn numpy pandas scipy
+```
+3. Format the input symptoms as "Itching, Skin Rash, Nodal Skin Eruptions"
+4. Run the code to get disease predictions.
 
 Remember to ensure that the input is properly formatted to receive accurate predictions.
 
 ### Format for Input Parameters
 
 When providing input parameters for disease prediction, use the following format: "Parameter1,Parameter2,Parameter3.
-"for ex= "**Fungal infection:** Itching,Skin_Rash,Nodal_Skin_Eruptions"
+"for ex= "**Fungal infection:** Itching, Skin Rash, Nodal Skin Eruptions"
 
 # List of Available Symptoms & Diseases
 <details>
@@ -127,10 +135,11 @@ When providing input parameters for disease prediction, use the following format
 
 ### Getting Disease Predictions
 
-To run the predicting system for a result, simply copy and paste the parameters for that disease in the format mentioned above. The model will analyze the input parameters and provide a prediction for the disease based on the provided data.
+To get a disease prediction, you need to run one of the provided Python scripts or notebooks. The input format for symptoms is a comma-separated string.
 
-Remember to include all relevant parameters in the input to receive accurate predictions
-and Kindly provide an adequate number of input symptoms to avoid potential errors and ensure a smoother experience and more accurate results. Just like doctors need sufficient symptoms to diagnose accurately, our system functions better with comprehensive information, reducing the chances of errors.
+**Example Input:** `"Itching,Skin_Rash,Nodal_Skin_Eruptions"`
+
+The model will analyze the provided symptoms and output a predicted disease. Ensure you provide a sufficient number of relevant symptoms for a more accurate prediction.
 
 ## Troubleshooting
 If you encounter any issues or have questions, please don't hesitate to reach out for support.
