@@ -9,51 +9,50 @@
 - [Files](#files)
 - [Features](#features)
 - [Usage](#usage)
+- [List of Available Symptoms & Diseases](#list-of-available-symptoms--diseases)
+- [Getting Disease Predictions](#getting-disease-predictions)
+- [Contributors](#contributors)
 
 ## About
 
-The Multiple Disease Prediction Bot is a machine learning model designed to predict up to 41 different diseases based on input symptoms. The model is trained on a dataset with approximately 131 parameters and utilizes three different training models: Support Vector Machine (SVM), Random Forest (RF), and Naive Bayes (NB).
-
-Please note that when providing input to the bot, it's important to format the symptoms as follows: "Itching, Skin Rash, Nodal Skin Eruptions" Incorrect formatting may lead to false predictions or errors.
+The Multiple Disease Prediction Bot is a machine learning model designed to predict diseases based on input symptoms. This application uses a pre-trained model (`Multiple_disease_prediction_bot_trained_model.sav`) and requires a trained `label_encoder.sav` to interpret the predictions. It utilizes the symptoms present as columns in the `Training.csv` file to process user input.
 
 ## Files
 
-1.  **`LabelEncoder.ipynb`:** Jupyter Notebook likely used for encoding categorical disease labels.
-2.  **`Multiple disease prediction with spyder.py`:** The main Python script for the disease prediction bot, likely intended to be run with Spyder IDE.
-3.  **`Multiple_Disease_prediction_.ipynb`:** Jupyter Notebook for disease prediction, potentially used in Google Colab.
-4.  **`Multiple_disease_prediction_bot_trained_model.sav`:** The serialized (saved) trained Support Vector Machine (SVM) model.
-5.  **`README.md`:** This file, providing information about the project.
-6.  **`Testing.csv`:** The dataset used for evaluating the performance of the trained model.
-7.  **`Training.csv`:** The dataset used for training the machine learning model.
-8.  **`label_encoder.sav`:** The serialized (saved) LabelEncoder object, used to transform disease names.
-9.  **`multiple_disease_prediction.py`:** Another Python script for disease prediction, potentially a refactored or alternative version.
+1.  **`Multiple_disease_prediction_bot_trained_model.sav`:** The serialized (saved) trained machine learning model.
+2.  **`README.md`:** This file, providing information about the project.
+3.  **`Training.csv`:** The dataset used for training the machine learning model (used to identify available symptoms).
+4.  **`label_encoder.sav`:** The serialized (saved) LabelEncoder object, used to transform disease names from numerical predictions.
+5.  **`app.py`:** The Streamlit application code for the disease prediction bot.
+
+**Note:** Files like Jupyter Notebooks and other Python scripts might be part of the project's development history but are not directly used by the current Streamlit application.
 
 ## Features
 
-- Predicts up to 41 different diseases.
-- Utilizes approximately 131 parameters for training.
-- Trained on three different models: SVM, RF, and NB.
+- Predicts diseases based on user-provided symptoms.
+- Uses a pre-trained machine learning model.
+- Interprets predictions using a trained LabelEncoder.
+- Leverages the symptom list from the `Training.csv` file.
+- Provides a user-friendly interface via Streamlit.
 
 ## Usage
 
 To use the Multiple Disease Prediction Bot, follow these steps:
 
-1. Open the "Multiple disease prediction with spyder.py" file using an appropriate IDE like Spyder.
-2. Ensure that the necessary dependencies are installed, including the required Python libraries.
-```
-pip install matplotlib seaborn scikit-learn numpy pandas scipy
-```
-3. Format the input symptoms as "Itching, Skin Rash, Nodal Skin Eruptions"
-4. Run the code to get disease predictions.
-```
-& "C:\Users\sudha\AppData\Roaming\Python\Python313\Scripts\streamlit.exe" run "Multiple disease prediction with spyder.py"
-```
-or
-```
-streamlit run Multiple disease prediction with spyder.py
-```
-
-Remember to ensure that the input is properly formatted to receive accurate predictions.
+1.  Ensure you have the following files in the same directory as `app.py`:
+    * `Multiple_disease_prediction_bot_trained_model.sav`
+    * `label_encoder.sav`
+    * `Training.csv`
+2.  Make sure you have the necessary Python libraries installed:
+    ```bash
+    pip install streamlit joblib pandas numpy scikit-learn
+    ```
+3.  Run the Streamlit application from your terminal:
+    ```bash
+    python -m streamlit run "Streamlit app/app.py"
+    ```
+4.  Once the application opens in your web browser, enter the symptoms you are experiencing in the text area, separated by commas (e.g., `Fever,Cough,Fatigue`). The input is case-insensitive, and spaces in symptom names will be handled.
+5.  Click the "Predict Disease" button to get the model's prediction.
 
 ### Format for Input Parameters
 
@@ -142,11 +141,7 @@ When providing input parameters for disease prediction, use the following format
 
 ### Getting Disease Predictions
 
-To get a disease prediction, you need to run one of the provided Python scripts or notebooks. The input format for symptoms is a comma-separated string.
-
-**Example Input:** `"Itching,Skin_Rash,Nodal_Skin_Eruptions"`
-
-The model will analyze the provided symptoms and output a predicted disease. Ensure you provide a sufficient number of relevant symptoms for a more accurate prediction.
+To get a disease prediction, simply enter your symptoms in the provided text area and click the "Predict Disease" button. Ensure that the symptoms you enter are present in the list of available symptoms. The model will then process these symptoms and output a predicted disease.
 
 ## Troubleshooting
 If you encounter any issues or have questions, please don't hesitate to reach out for support.
