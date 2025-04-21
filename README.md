@@ -27,6 +27,11 @@ The Multiple Disease Prediction Bot is a machine learning model designed to pred
 
 **Note:** Files like Jupyter Notebooks and other Python scripts might be part of the project's development history but are not directly used by the current Streamlit application.
 
+## Data Sources
+
+- Multiple disease dataset: Custom dataset used for training and testing.
+[training. csv](https://www.kaggle.com/datasets/kaushil268/disease-prediction-using-machine-learning)
+
 ## Features
 
 - Predicts diseases based on user-provided symptoms.
