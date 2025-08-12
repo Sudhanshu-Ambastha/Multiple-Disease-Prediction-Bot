@@ -3,6 +3,8 @@
 ![Web capture_16-12-2023_15579_localhost](https://github.com/Sudhanshu-Ambastha/Google-background/assets/135802131/22a87cc6-fc4d-4ed5-832d-dd8d9d230f94)
 ![Web capture_16-12-2023_16327_localhost](https://github.com/Sudhanshu-Ambastha/Google-background/assets/135802131/5a297e58-7ead-4407-8116-bdfff8585079)
 
+## Tech Stack
+[![My Skills](https://go-skill-icons.vercel.app/api/icons?i=vscode,jupyter,googlecolab,anaconda,mysql,git,github,githubpages,streamlit,)](https://github.com/LelouchFR/skill-icons)
 ## Table of Contents
 
 - [About](#about)
